@@ -1,9 +1,30 @@
-<main>
-  <h1 class="title">Hello from Angular !</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
 
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/logo.png">
-</main>
-<footer>
-  <a ng-href="{{app.url}}">Webpack Angular Starter</a>
-</footer>
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref="phoneList">Главная</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a ui-sref="shopCart">
+            Корзина
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a ui-sref="shopCart">
+            <i class="glyphicon glyphicon-shopping-cart"></i>
+            Товаров в корзине: {{ app.showCommonQuantity() }}
+            <strong>
+              Сумма: {{ app.showCommonCost() }}
+            </strong>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main ui-view></main>

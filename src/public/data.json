@@ -1,0 +1,9 @@
+[
+  { "id": 1, "name": "Apple iPhone 5", "price": 30800, "src": "/img/iphone.png" },
+  { "id": 2, "name": "Apple iPhone 5s", "price": 41800, "src": "/img/iphone.png" },
+  { "id": 3, "name": "Apple iPhone SE", "price": 52800, "src": "/img/iphone.png" },
+  { "id": 4, "name": "Apple iPhone 6", "price": 59800, "src": "/img/iphone.png" },
+  { "id": 5, "name": "Apple iPhone 6s", "price": 63800, "src": "/img/iphone.png" },
+  { "id": 6, "name": "Apple iPhone 7", "price": 71800, "src": "/img/iphone.png" },
+  { "id": 7, "name": "Apple iPhone 8", "price": 100800, "src": "/img/iphone.png" }
+]

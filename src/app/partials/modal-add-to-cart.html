@@ -1,0 +1,9 @@
+<div class="ng-modal" ng-show="show">
+  <div class="ng-modal-overlay" ng-click="hideModal()"></div>
+  <div class="ng-modal-dialog panel panel-default" ng-style="dialogStyle">
+    <div class="ng-modal-close" ng-click="hideModal()">
+      <i class="glyphicon glyphicon-remove"></i>
+    </div>
+    <div ng-transclude></div>
+  </div>
+</div>

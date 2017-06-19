@@ -1,0 +1,9 @@
+{
+  "extends": ["eslint-config-airbnb", "angular"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "plugins": "angular"
+}

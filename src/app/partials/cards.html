@@ -1,0 +1,31 @@
+<div class="panel panel-default card" ng-repeat="item in app.data">
+  <div class="panel-body">
+    <h4>
+      {{ item.name }}
+    </h4>
+    <img ng-src="{{ item.src }}" role="presentation" class="card__image">
+    {{ item.price }} руб.
+  </div>
+  <div class="panel-footer">
+    <a href="#" class="btn btn-success" ng-click="app.openCartModal(item.id)">
+      <i class="glyphicon glyphicon-shopping-cart"></i> В корзину
+    </a>
+  </div>
+</div>
+<modal-dialog show="app.modalShown" width="300px">
+  <div class="panel-header">
+    <h4>Modal Content Goes here</h4>
+  </div>
+  <div class="panel-body">
+    <img ng-src="{{ app.openProduct.src }}" role="presentation" class="card__image">
+    <label for="quantity">Количество</label>
+    <input type="number" class="form-control" id="quantity" ng-model="app.openProductQuantity" min="0">
+    <p>
+      Цена: {{ app.openProduct.price * app.openProductQuantity }}
+    </p>
+  </div>
+  <div class="panel-footer">
+    <button class="btn btn-success" ng-click="app.addProductsToCart()">Добавить в корзину</button>
+    <button class="btn btn-danger" ng-click="app.hideCartModal()">Отмена</button>
+  </div>
+</modal-dialog>

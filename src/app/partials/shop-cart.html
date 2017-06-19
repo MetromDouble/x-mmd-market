@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Корзина</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th>Название</th>
+      <th>Цена за единицу</th>
+      <th>Количество</th>
+      <th>Общая сумма по товару</th>
+      <th></th>
+    </tr>
+    <tr ng-repeat="item in app.shopCart">
+      <td>{{ app.data[item.id].name }}</td>
+      <td>{{ app.data[item.id].price }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ app.data[item.id].price * item.quantity }}</td>
+      <td>
+        <a href="#" ng-click="app.removeProductsFromCart(item.id)">
+          <i class="glyphicon glyphicon-remove text-danger"></i>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          Итого
+        </strong>
+      </td>
+      <td></td>
+      <td></td>
+      <td>
+        <strong>
+          {{ app.showCommonCost() }}
+        </strong>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<a href="#" class="btn btn-success">
+  Оформить заказ
+</a>
